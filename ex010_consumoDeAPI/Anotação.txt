@@ -1,0 +1,28 @@
+Nessa atividade iremos consumir uma API fornecida pelo Banco Central
+
+1- Acesse o site do Banco Central.
+    - Pesquise por "Dólar comercial (venda e compra) - cotações diárias"
+        - Procure e Acesse "Dólar comercial (venda e compra) - cotações diárias"
+            - Procure e Acesse Cotação do Dólar por períodoJSON
+                - Acesse a URL disponibilizada (https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos/CotacaoDolarPeriodo#eyJmb3JtdWxhcmlvIjp7IiRmb3JtYXQiOiJqc29uIiwiJHRvcCI6MTAwfX0=)
+                    - Configure da seguinte forma:
+                        - Data inicial: DiaAtual/MêsAtual/AnoAtual
+                        - Data final: DiaAtual-7dias/MêsAtual-7dias/AnoAtual-7dias
+                        - Máximo: 1
+                        - Ordenação: dataHoraCotacao desc
+                        - Saída: json
+                        - Campos: Cotação de compra, Data e hora da cotação
+                        - Clique em "Copiar URL"
+
+2- Trate e separe os dados da URL no codigo php
+// caso necessario trate os caracteres especiais com "\" 
+    - <?php 
+        
+        $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+                    $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\'01-07-2025\'&@dataFinalCotacao=\'01-14-2025\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+                    $dados = json_decode(file_get_contents($url), true); // true exibe no formato de array, false exibe no formato de objeto
+                    $real = $_GET["real"];
+                    $cotacao = $dados["value"][0]["cotacaoCompra"];
+                    $dolar = number_format(($real/$cotacao), 2);
+                    echo "<p> Seus " . numfmt_format_currency($padrao, $real, "BRL") .  " equivalem a " . numfmt_format_currency($padrao, $dolar, "USD") . "</p>";
+      ?>

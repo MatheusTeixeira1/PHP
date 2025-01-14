@@ -1,0 +1,16 @@
+1- Variáveis ​​superglobais
+    - $_GET, Coleta dados enviados por métodos HTTP GET. Os dados são enviados para o
+    script PHP na forma de um array associativo $_GET. Utilizando como nome identificador
+    o name do input:
+        Ex: echo 'Bem-vindo ' . $_GET["nome"];
+
+    - $_COOKIES.
+
+    - $_POST.
+
+    - $_REQUEST, É a junção de $_GET, $_POST, $_COOKIES
+
+2- Tratar campos nulos ou vazios
+    -Operador de coalescência nula, No codigo php:
+        $nome = $_GET["nome"] ?? "sem nome"; // se o atributo nome estiver nulo ou vazio será substituido por "sem nome"
+        $sobreNome = $_GET["sobrenome"] ?? "desconhecido";

@@ -1,0 +1,35 @@
+1- Tipos de Strings:
+    -Double quoted (Aspas duplas).
+        -Ex: echo "Nome: $nome" -----> Nome: Matheus
+    -Single quoted (Aspas simples, não interpreta o conteudo).
+        -Ex: echo 'Nome: $nome' -----> Nome: $nome
+    -Heredoc (interpretada).
+        -Ex: echo <<< FRASE
+
+            // Seu texo aqui
+
+        FRASE;
+    -Nowdoc (literal).
+        -Ex: echo <<< 'FRASE'
+
+            // Seu texo aqui
+
+        FRASE;
+
+
+2- Concatenação
+    -Utiliza-se o "."
+
+3- Strings e constantes
+    -Não é possível colocar uma constante dentro de uma string da mesma forma que com uma variável.
+        -Ex:
+            const NOME = "Matheus"
+            echo "Olá NOME"; //isso não vai funcionar
+            echo "Olá " . NOME; //isso vai funcionar
+    -O mesmo vale para funlções
+        -Ex:
+            echo "Estamos no ano de: " . date('Y');
+
+4- Caractere de escape:
+    -Utiliza-se "\" para exibir um caractere de forma literal
+        Ex: echo "$nome \" Minotauro \" $sobrenome"

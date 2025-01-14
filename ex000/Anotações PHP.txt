@@ -1,0 +1,24 @@
+1- Inicie o servidor. Aconselho utilizar algum ambiente de desenvolvimento como o Laragon ou Xampp.
+2- Na pasta raiz do seu ambiente, crie uma pasta para seus projetos.
+3- Abra a pasta de projetos na IDE de sua preferência.
+4- Dentro da pasta de projetos, crie o exercício "ex000".
+5- Crie um arquivo chamado "index.php".
+6- Dentro do index.php, digite o seguinte código:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+    <h2>
+        <?php 
+            echo "Olá, Mundo (com echo) \u{1F30E}";
+        ?>
+    </h2>
+    <h2>
+        <?php 
+            print "Olá, Mundo (com print)";
+        ?>
+    </h2>
+</body>
+</html>
+
+7- Acesse "http://localhost/NomeDaSuaPastaDeProjetosAqui/ex000/".

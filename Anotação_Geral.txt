@@ -1,0 +1,9 @@
+1- Arquivo php.ini
+   Na pasta do php existe um arquivo de configuração, o php.ini, nele é possivel configurar
+   diversos recursos nativos do php como as shorttags:
+   
+   short_open_tag = Off
+
+2- Interpolação de strings e variaveis
+   - echo "olá $nome" . $sobrenome (o "." interpola strings ou variaveis)
+

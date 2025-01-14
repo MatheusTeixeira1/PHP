@@ -1,0 +1,23 @@
+- Valor absoluto:
+    abs()
+
+- Conversão de base:
+    base_convert(numero, baseAtual, baseFinal);
+        Ex: base_convert(123, 10, 8) = 173
+
+- Arredondamento:
+    - ceil() (Maior valor)
+    - flor() (Menor valor)
+    - round() (Valor mais próximo)
+
+- Divisão inteira:
+    intdiv()
+
+- Valor máximo e minimo de uma lista:
+    - max() e min()
+
+- Raiz quadrada
+    - sqrt()
+
+- Raiz cubica
+    - 27 ** (1/3)

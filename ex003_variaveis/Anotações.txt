@@ -1,0 +1,52 @@
+1- Variáveis possuem tipagem dinâmica.
+
+2- Como declarar uma variável:
+    - $nomeDaSuaVariavelAqui = "seuValor aqui"; ( sifrão + "nome" )
+    - $inteiro = 123;
+    - $booleano = true;
+    - $quebrado = 12.3;
+
+3- Regras de nomeação:
+    - Variáveis sempre começam com $.
+    - O segundo caractere pode ser uma letra ou _.
+    - Somente [a-z], [A-Z], [0-9] e [_] são permitidos.
+    - Somente caracteres ASCII a partir de 128 (aceita á, õ, ç).
+    - Case sensitive.
+    - Não use nomes reservados como $this
+    - Use camelCase para variáveis e SANAKE_CASE para consts
+
+4- Declarando uma constante:
+    - const NOMEDESUACONSTANTE = "seuValor"; ( nome reservado const + nome da constante em maiúsculas )
+    - define("NOME_DA_CONSTANTE", "valor da constante");
+
+5- Categoria de tipos primitivos;
+    -Escalares.
+        -int(incluindo bases 0x, 0b, 0o), float/double (incluindo notação científica, ex: 2e3), int e boolean
+    -Compostos.
+        -array e objec
+    -Especiais.
+        -null, resource, callbase, mixed
+
+6- Para obter mais informalções sobre uma string
+    -var_dump($variavel);
+
+7- Array:
+    $array = [5, 2.3, "oi", true]
+
+8- Variáveis ​​superglobais
+    - $_GET, Coleta dados enviados por métodos HTTP GET. Os dados são enviados para o
+    script PHP na forma de um array associativo $_GET. Utilizando como nome identificador
+    o name do input:
+        Ex: echo 'Bem-vindo ' . $_GET["nome"];
+
+    - $_COOKIES.
+
+    - $_POST.
+
+    - $_REQUEST, É a junção de $_GET, $_POST, $_COOKIES
+
+9- Formatação de numeros:
+    -number_format(%numero, 2, "," , ".")
+    - Formatação monetaria:
+        $padrao= numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+        $real = numfmt_format_currency($padrao, 100, "BRL")

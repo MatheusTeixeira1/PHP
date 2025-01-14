@@ -1,0 +1,17 @@
+1- Definoção do fuso horario:
+    - date_default_timezone_set("America/Sao_Paulo");
+    - Essa linha garante que todas as funlções que utilisem hora e data sejam formatadas no
+    fuso horario de São Paulo
+
+2- Exibição de dia:
+    - echo "Hoje é dia " . date("d/M/T");
+    - "d" = dia.
+    - "M" = o mês.
+    - "Y" = ano.
+    - "T" = fuso horario.
+
+3- Exibição de data:
+    - echo "e a hora atual é". date("G:i:s T");
+    - "G" = hora no formato 24.
+    - "i" = minutos.
+    - "s" = segundos.
