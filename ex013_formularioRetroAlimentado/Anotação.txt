@@ -1,0 +1,2 @@
+1- No formulário da sua página:
+    <form action = "<?= $_SERVER['PHP_SELF'] ?>"> // esse action referência ao propio arquivo php

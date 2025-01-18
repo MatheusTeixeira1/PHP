@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de real para dolar</title>
+    <style>
+
+        *{
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100%;
+        }
+
+        header{
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            height: 32px;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisando um número Real</h1>
+    </header>
+
+    <main>
+        <div>
+            <form action="numero.php" method="get">
+                <label for="real">Número Real :</label>
+                <div>
+                    <input type="number" name="numero" id="idNumero" step="0.01">
+                    <input type="submit" value="Analisar">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

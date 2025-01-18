@@ -1,0 +1,21 @@
+1- Variáveis ​​superglobais
+    - $_GET, Coleta dados enviados por métodos HTTP GET. Os dados são enviados para o
+    script PHP na forma de um array associativo $_GET. Utilizando como nome identificador
+    o name do input:
+        Ex: echo 'Bem-vindo ' . $_GET["nome"];
+
+    - $_POST, Bastante similar com a $_GET porém coleta dados enviados por métodos HTTP POST.
+
+    - $_REQUEST, É a junção de $_GET, $_POST, $_COOKIES
+
+    - $_COOKIES.
+    
+    - $_FILES
+
+    - $_SESSION
+
+    - $_ENV
+
+    - $_SERVER
+
+    - $GLOBALS, junta todas as anteriores
